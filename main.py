@@ -10,6 +10,7 @@ pygame.init()
 # Creating a screen
 running = False
 homeScreen = Tk()
+homeScreen.title('Space Invaders')
 homeScreen.geometry('350x200')
 
 style = Style()
@@ -31,6 +32,8 @@ btn2 = Button(homeScreen, text='Quit', command=lambda: GameLoop(False))
 btn2.pack(side=TOP, padx=0, pady=3)
 
 homeScreen.mainloop()
+
+screen = None
 if running:
     screen = pygame.display.set_mode((800, 600))
 
